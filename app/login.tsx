@@ -1,9 +1,8 @@
-import { View, StyleSheet, TextInput, TouchableOpacity, Image } from 'react-native';
 import { Link, router } from 'expo-router';
+import { Image, StyleSheet, TextInput, TouchableOpacity, useColorScheme, View } from 'react-native';
 import ThemedText from '../components/ThemedText';
 import ThemedView from '../components/ThemedView';
 import { Colors } from '../constants/Colors';
-import { useColorScheme } from 'react-native';
 
 export default function Login() {
   const colorScheme = useColorScheme();

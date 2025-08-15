@@ -1,5 +1,4 @@
-import { View } from 'react-native';
-import { useColorScheme } from 'react-native';
+import { useColorScheme, View } from 'react-native';
 import { Colors } from '../../constants/Colors';
 
 export default function TabBarBackground() {

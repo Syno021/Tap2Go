@@ -1,9 +1,8 @@
-import { View, StyleSheet, TouchableOpacity, Image } from 'react-native';
-import { Link, router } from 'expo-router';
+import { router } from 'expo-router';
+import { Image, StyleSheet, TouchableOpacity, useColorScheme, View } from 'react-native';
 import ThemedText from '../components/ThemedText';
 import ThemedView from '../components/ThemedView';
 import { Colors } from '../constants/Colors';
-import { useColorScheme } from 'react-native';
 
 export default function Home() {
   const colorScheme = useColorScheme();

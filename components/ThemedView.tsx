@@ -1,5 +1,4 @@
-import { View, ViewProps } from 'react-native';
-import { useColorScheme } from 'react-native';
+import { useColorScheme, View, ViewProps } from 'react-native';
 import { Colors } from '../constants/Colors';
 
 export default function ThemedView(props: ViewProps) {
