@@ -52,7 +52,7 @@ export default function Login() {
         
         <View style={styles.registerContainer}>
           <ThemedText>Don't have an account? </ThemedText>
-          <TouchableOpacity
+          <TouchableOpacity onPress={() => router.push("/Register")}
             >
               <ThemedText style={[styles.link, { color: Colors[colorScheme ?? 'light'].tint }]}>
                 Register
