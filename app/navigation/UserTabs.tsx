@@ -1,13 +1,13 @@
-// app/navigation/AdminTabs.tsx
 import React from "react";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import Home from "../../screens/Home";
 import Profile from "../../screens/Profile";
 import ExploreStack from "../../app/navigation/ExploreStack";
 import { Ionicons } from "@expo/vector-icons";
+import { CommonActions, useNavigation } from "@react-navigation/native";
 
 export type UserTabParamList = {
-  Home: undefined;
+  TabHome: undefined;
   Profile: undefined;
   Explore: undefined;
 };
@@ -24,9 +24,10 @@ export default function UserTabs() {
       }}
     >
       <Tab.Screen
-        name="Home"
+        name="TabHome"
         component={Home}
         options={{
+          title: "Home",
           tabBarIcon: ({ color, size }) => <Ionicons name="home" color={color} size={size} />,
         }}
       />
