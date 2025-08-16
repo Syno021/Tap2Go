@@ -1,4 +1,4 @@
-import { Link, router } from 'expo-router';
+import { router } from 'expo-router';
 import { Image, StyleSheet, TextInput, TouchableOpacity, useColorScheme, View } from 'react-native';
 import ThemedText from '../components/ThemedText';
 import ThemedView from '../components/ThemedView';
@@ -52,13 +52,13 @@ export default function Login() {
         
         <View style={styles.registerContainer}>
           <ThemedText>Don't have an account? </ThemedText>
-          <Link href="/register" asChild>
-            <TouchableOpacity>
+          <TouchableOpacity
+            >
               <ThemedText style={[styles.link, { color: Colors[colorScheme ?? 'light'].tint }]}>
                 Register
               </ThemedText>
             </TouchableOpacity>
-          </Link>
+
         </View>
       </View>
     </ThemedView>
