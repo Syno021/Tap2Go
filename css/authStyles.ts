@@ -1,8 +1,8 @@
-import { StyleSheet } from "react-native";
+import { Platform, StyleSheet } from "react-native";
 
 export default StyleSheet.create({
   container: {
-    flexGrow: 1,
+    flex: 1,
     backgroundColor: "#f5f5f5",
     alignItems: "center",
     padding: 20,
@@ -40,11 +40,47 @@ export default StyleSheet.create({
     fontWeight: "bold",
   },
 
-  /** FORM **/
-  formContainer: {
+  /** CARDS CONTAINER **/
+  cardsContainer: {
+    width: "100%",
+    maxWidth: 400,
     marginTop: 80,
     alignItems: "center",
+    overflow: "hidden",
+    flex: 1,
   },
+  card: {
+    position: "absolute",
+    width: "100%",
+    backgroundColor: "#fff",
+    borderRadius: 16,
+    padding: 24,
+    ...(Platform.OS === 'web' 
+      ? { boxShadow: "0 2px 8px rgba(0, 0, 0, 0.1)" }
+      : Platform.OS === 'ios'
+      ? {
+          shadowColor: "#000",
+          shadowOffset: { width: 0, height: 2 },
+          shadowOpacity: 0.1,
+          shadowRadius: 8,
+        }
+      : {
+          elevation: 4,
+        }
+    ),
+  },
+  registerCard: {
+    backgroundColor: "#fff",
+  },
+  cardTitle: {
+    fontSize: 24,
+    fontWeight: "bold",
+    marginBottom: 24,
+    textAlign: "center",
+    color: "#1a1a1a",
+  },
+
+  /** FORM **/
   input: {
     width: "100%",
     backgroundColor: "#fff",
@@ -54,11 +90,8 @@ export default StyleSheet.create({
     marginBottom: 15,
     fontSize: 16,
     color: "#333",
-    shadowColor: "#000",
-    shadowOpacity: 0.05,
-    shadowOffset: { width: 0, height: 1 },
-    shadowRadius: 3,
-    elevation: 2,
+    borderWidth: 1,
+    borderColor: "#ddd",
   },
   primaryBtn: {
     backgroundColor: "#f57c00",
@@ -84,6 +117,7 @@ export default StyleSheet.create({
   linkContainer: {
     flexDirection: "row",
     marginTop: 20,
+    justifyContent: "center",
   },
   linkText: {
     fontSize: 14,
@@ -93,5 +127,16 @@ export default StyleSheet.create({
     fontSize: 14,
     fontWeight: "bold",
     color: "#f57c00",
+  },
+
+  /** REGISTER BACK BUTTON **/
+  backButton: {
+    alignSelf: "flex-start",
+    marginBottom: 16,
+  },
+  backButtonText: {
+    color: "#f57c00",
+    fontSize: 16,
+    fontWeight: "bold",
   },
 });
